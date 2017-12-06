@@ -20,3 +20,10 @@ module.exports = (robot) ->
 
   robot.respond /おはよう/i, (msg) ->
     msg.send "は〜い！！"
+
+  robot.respond /バイバイ|またね/i, (msg) ->
+    goodnight = msg.random [
+      "ば〜〜い"
+      "ぽよぽよ"
+    ]
+    msg.send "#{goodnight}"
